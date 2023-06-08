@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+// these replace the constructors and getter/setters, no need to type it out
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
