@@ -20,7 +20,7 @@ public class EmployeeService {
             employees.add(new Employee("3","John","Tan"));
     }
 
-    public List<Employee> getAllEmployes(){
+    public List<Employee> getAllEmployees(){
         return this.employees;
     }
 

@@ -37,5 +37,9 @@ public class EmployeeController {
         return empSvc.getAllEmployees();
     }
 
+    @GetMapping(value="/filteredlist")
+    public @ResponseBody List<Employee> getEmployeesByLastName(){
+        return empSvc.getEmployeesByLastName("Tan");
+    }
 
 }
