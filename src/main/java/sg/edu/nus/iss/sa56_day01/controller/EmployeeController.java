@@ -24,7 +24,7 @@ DeleteMapping - to delete an object/record from a list/db
 @Controller
 
 //when end with /employees, it will come to this controller
-@RequestMapping (path = "/employees")
+@RequestMapping (path="/employees")
 
 public class EmployeeController {
     
@@ -32,11 +32,9 @@ public class EmployeeController {
     //is a form of DI
     EmployeeService empSvc;
 
-    //@GetMapping(value="/list")  //if /employees/list then will call this
-    @GetMapping()
+    @GetMapping(value="/list")  //if /employees/list then will call this
     public @ResponseBody List<Employee> getAllEmployees(){
         return empSvc.getAllEmployees();
-        //will be in JSON structure
     }
 
 
