@@ -42,4 +42,9 @@ public class EmployeeController {
         return empSvc.getEmployeesByLastName("Tan");
     }
 
+    @GetMapping(value="/bygender")
+    public @ResponseBody List<Employee> getEmployeesByGender(){
+        return empSvc.getEmployeesByGender("F");
+    }
+
 }

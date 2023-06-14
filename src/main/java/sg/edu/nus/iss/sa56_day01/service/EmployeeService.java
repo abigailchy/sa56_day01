@@ -15,9 +15,9 @@ public class EmployeeService {
     public EmployeeService(){
             // this one can use the @Data way?
 
-            employees.add(new Employee("1","firstname","lastname"));
-            employees.add(new Employee("2","Mary","Tan"));
-            employees.add(new Employee("3","John","Tan"));
+            employees.add(new Employee("1","firstname","lastname","F"));
+            employees.add(new Employee("2","Mary","Tan","F"));
+            employees.add(new Employee("3","John","Tan","M"));
     }
 
     public List<Employee> getAllEmployees(){
@@ -30,6 +30,11 @@ public class EmployeeService {
         return filterEmployees;
     }
 
+    public List<Employee> getEmployeesByGender(String gender){
+        List<Employee> filterEmployees = employees.stream()
+                .filter(emp->emp.getGender().equals(gender)).toList();
+        return filterEmployees;
+    }
    
 
 
